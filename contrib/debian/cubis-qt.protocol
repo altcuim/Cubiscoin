@@ -1,0 +1,11 @@
+[Protocol]
+exec=cubis-qt '%u'
+protocol=cubis
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

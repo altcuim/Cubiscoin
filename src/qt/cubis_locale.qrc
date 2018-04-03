@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cubis_bg.qm</file>
+        <file alias="ca">locale/cubis_ca.qm</file>
+        <file alias="cs">locale/cubis_cs.qm</file>
+        <file alias="da">locale/cubis_da.qm</file>
+        <file alias="de">locale/cubis_de.qm</file>
+        <file alias="en">locale/cubis_en.qm</file>
+        <file alias="en_US">locale/cubis_en_US.qm</file>
+        <file alias="es">locale/cubis_es.qm</file>
+        <file alias="fi">locale/cubis_fi.qm</file>
+        <file alias="fr_FR">locale/cubis_fr_FR.qm</file>
+        <file alias="it">locale/cubis_it.qm</file>
+        <file alias="ja">locale/cubis_ja.qm</file>
+        <file alias="ko_KR">locale/cubis_ko_KR.qm</file>
+        <file alias="nl">locale/cubis_nl.qm</file>
+        <file alias="pl">locale/cubis_pl.qm</file>
+        <file alias="pt">locale/cubis_pt.qm</file>
+        <file alias="pt_BR">locale/cubis_pt_BR.qm</file>
+        <file alias="ro_RO">locale/cubis_ro_RO.qm</file>
+        <file alias="ru">locale/cubis_ru.qm</file>
+        <file alias="sk">locale/cubis_sk.qm</file>
+        <file alias="sv">locale/cubis_sv.qm</file>
+        <file alias="uk">locale/cubis_uk.qm</file>
+        <file alias="zh_CN">locale/cubis_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cubis_zh_TW.qm</file>
+    </qresource>
+</RCC>

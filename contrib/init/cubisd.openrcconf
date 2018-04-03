@@ -1,0 +1,26 @@
+# /etc/conf.d/cubisd: config file for /etc/init.d/cubisd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cubis/cubis.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/cubisd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/cubisd.pid"
+
+# Where to write cubisd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/cubisd"
+
+# User and group to own cubisd process
+#BITCOIND_USER="cubis"
+#BITCOIND_GROUP="cubis"
+
+# Path to cubisd executable
+#BITCOIND_BIN="/usr/bin/cubisd"
+
+# Nice value to run cubisd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

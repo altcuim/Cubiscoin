@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Cubis
+Comment=Cubis P2P Cryptocurrency
+Comment[fr]=Cubis, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Cubis, eşten eşe kriptografik sanal para birimi
+Exec=cubis-qt %u
+Terminal=false
+Type=Application
+Icon=cubis128
+MimeType=x-scheme-handler/cubis;
+Categories=Office;Finance;
