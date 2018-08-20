@@ -110,7 +110,7 @@ public:
         nMaturity = 20;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 510;
-        nMaxMoneyOut = 22000000 * COIN;
+        nMaxMoneyOut = 26464946 * COIN;
 
         const char* pszTimestamp = "This is the revolution of alt coins future is here this is the new world";
         CMutableTransaction txNew;
@@ -132,8 +132,8 @@ public:
         assert(hashGenesisBlock == uint256("0x00000435318be1017e97bf0c7b922d39bc622b11a6944722612792c4eda3a63a"));
         assert(genesis.hashMerkleRoot == uint256("0x57a535c3b04a15871c19d93c45abcb0cfb595221cb7b6fb4d8a6b15fbc7caca1"));
 
-        vSeeds.push_back(CDNSSeedData("SEED CUBIS 1", "140.82.60.191"));
-        vSeeds.push_back(CDNSSeedData("SEED CUBIS 2", "104.156.250.20"));
+        vSeeds.push_back(CDNSSeedData("SEED CUBIS 1", "140.82.36.133"));
+        vSeeds.push_back(CDNSSeedData("SEED CUBIS 2", "85.121.197.34"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 33);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 91);
