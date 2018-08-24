@@ -2,7 +2,7 @@ COIN_DAEMON='cubisd'
 COIN_CLI='cubis-cli'
 COIN_PATH='/root/cubis/'
 COIN_TGZ='https://github.com/altcuim/Cubiscoin/releases/download/v1.0.1/Cubiscoin-cli.tar.gz'
-
+COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Cubis'
 
 function stop_priv_node(){
