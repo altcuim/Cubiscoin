@@ -13,7 +13,7 @@ function stop_priv_node(){
   mkdir $COIN_PATH
   cd $COIN_PATH
   ./cubis-cli stop
-  sleep 3
+  sleep 5
 }
 
 function restart_node(){
