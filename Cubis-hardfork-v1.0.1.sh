@@ -7,6 +7,7 @@ COIN_NAME='Cubis'
 
 function stop_priv_node(){
   echo -e "Stop $COIN_NAME deamon"
+  mkdir $COIN_PATH
   cd $COIN_PATH
   ./cubis-cli stop
   sleep 3
