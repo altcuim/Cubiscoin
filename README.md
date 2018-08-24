@@ -7,6 +7,6 @@ After you setup the VPS at your chosen provider, you will need to login as root 
 
 Using this script for x86_64-linux VPS:
 ```
-wget -q https://raw.githubusercontent.com/altcuim/Cubiscoin/master/MN_UpgradeV1.0.0-V1.0.1.sh
-bash MN_UpgradeV1.0.0-V1.0.1.sh
+wget -q https://raw.githubusercontent.com/altcuim/Cubiscoin/master/Cubis-hardfork-v1.0.1.sh
+bash Cubis-hardfork-v1.0.1.sh
 ```
