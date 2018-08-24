@@ -1,29 +1,22 @@
-TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='cubis.conf'
-CONFIGFOLDER='/root/.cubis'
 COIN_DAEMON='cubisd'
 COIN_CLI='cubis-cli'
-COIN_PATH='/usr/local/bin/'
+COIN_PATH='/root/cubis/'
 COIN_TGZ='https://github.com/altcuim/Cubiscoin/releases/download/v1.0.1/Cubiscoin-cli.tar.gz'
-COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 
 COIN_NAME='Cubis'
-COIN_PORT=25333
-RPC_PORT=26333
-
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m'
 
 function stop_priv_node(){
   echo -e "Stop $COIN_NAME deamon"
-  systemctl stop $COIN_NAME.service
+  cd $COIN_PATH
+  ./cubis-cli stop
   sleep 3
 }
 
 function restart_node(){
-  systemctl start $COIN_NAME.service
-  echo -e "restart $COIN_NAME completed"
+  echo -e "Start $COIN_NAME deamon"
+  cd $COIN_PATH
+  ./cubisd -daemon
+  sleep 3
 }
 
 function compile_error() {
@@ -36,15 +29,12 @@ fi
 
 function download_node() {
   echo -e "Prepare to download $COIN_NAME binaries"
-  cd $TMP_FOLDER
+  cd $COIN_PATH
   wget -q $COIN_TGZ
   echo -e "Download $COIN_NAME binaries completed"
-  tar xvzf $COIN_ZIP -C /usr/local/bin/
+  tar xvzf $COIN_ZIP -C $COIN_PATH
   compile_error
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI
-  cd - >/dev/null 2>&1
-  rm -r $TMP_FOLDER >/dev/null 2>&1
-  clear
 }
 prepare_system(){
 echo -e "Installing required packages, it may take some time to finish.${NC}"
