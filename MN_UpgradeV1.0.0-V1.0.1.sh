@@ -16,7 +16,12 @@ function restart_node(){
   echo -e "Start $COIN_NAME deamon"
   cd $COIN_PATH
   ./cubisd -daemon
-  sleep 3
+  if [[ -z "$(ps axo cmd:100 | egrep $COIN_DAEMON)" ]]; then
+    echo -e "${RED}$COIN_NAME is not running${NC}, please investigate. You should start by running the following commands as root:"
+    exit 1
+  sleep 10
+  ./cubis-cli getinfo
+  echo -e "MN upgrade completed"
 }
 
 function compile_error() {
