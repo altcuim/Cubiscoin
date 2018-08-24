@@ -41,6 +41,7 @@ function download_node() {
   tar xvzf $COIN_ZIP -C $COIN_PATH
   compile_error
   chmod +x $COIN_PATH$COIN_DAEMON $COIN_PATH$COIN_CLI
+  rm $COIN_ZIP
 }
 function prepare_system(){
 echo -e "Installing required packages, it may take some time to finish.${NC}"
