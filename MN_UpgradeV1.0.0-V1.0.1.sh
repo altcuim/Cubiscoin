@@ -9,7 +9,7 @@ COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 
 COIN_NAME='Cubis'
 COIN_PORT=25333
-RPC_PORT=31002
+RPC_PORT=26333
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -46,7 +46,13 @@ function download_node() {
   rm -r $TMP_FOLDER >/dev/null 2>&1
   clear
 }
+prepare_system(){
+echo -e "Installing required packages, it may take some time to finish.${NC}"
+apt-get update >/dev/null 2>&1
+apt-get install libzmq5 >/dev/null 2>&1
+}
 
+prepare_system
 stop_priv_node
 download_node
 restart_node
