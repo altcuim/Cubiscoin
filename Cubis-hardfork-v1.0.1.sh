@@ -9,7 +9,7 @@ function stop_priv_node(){
   echo -e "Stop $COIN_NAME deamon"
   systemctl stop $COIN_NAME.service
   sleep 5
-  rm /usr/local/bin$COIN_DAEMON
+  rm /usr/local/bin/$COIN_DAEMON
   rm /usr/local/bin/$COIN_CLI
   mkdir $COIN_PATH
   cd $COIN_PATH
