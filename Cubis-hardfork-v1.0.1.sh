@@ -4,6 +4,7 @@ COIN_PATH='/root/cubis/'
 COIN_TGZ='https://github.com/altcuim/Cubiscoin/releases/download/v1.0.1/Cubiscoin-cli.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Cubis'
+COIN_PORT=25333
 
 function stop_priv_node(){
   echo -e "Stop $COIN_NAME deamon"
@@ -54,7 +55,16 @@ apt-get update >/dev/null 2>&1
 apt-get install libzmq5 >/dev/null 2>&1
 }
 
+function enable_firewall() {
+  echo -e "Installing and setting up firewall to allow ingress on port $COIN_PORT"
+  ufw allow $COIN_PORT/tcp comment "$COIN_NAME MN port" >/dev/null
+  ufw allow ssh comment "SSH" >/dev/null 2>&1
+  ufw limit ssh/tcp >/dev/null 2>&1
+  ufw default allow outgoing >/dev/null 2>&1
+  echo "y" | ufw enable >/dev/null 2>&1
+}
 prepare_system
 stop_priv_node
 download_node
+enable_firewall
 restart_node
