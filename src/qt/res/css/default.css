@@ -930,7 +930,8 @@ margin-left:16px;
 
 QWidget .QFrame#frameObfuscation { /* Obfuscation Widget */
 background-color:transparent;
-qproperty-minimumSize: 451px 250px;
+qproperty-minimumSize: 451px 260px;
+max-height: 280;
 }
 
 QWidget .QFrame#frameObfuscation QWidget {
