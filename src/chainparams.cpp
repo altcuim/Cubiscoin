@@ -114,7 +114,7 @@ public:
         nMaturity = 20;
         nMasternodeCountDrift = 20;
         nModifierUpdateBlock = 510;
-        nMaxMoneyOut = 26464946 * COIN;
+        nMaxMoneyOut = 29589963 * COIN;
 
         const char* pszTimestamp = "This is the revolution of alt coins future is here this is the new world";
         CMutableTransaction txNew;
