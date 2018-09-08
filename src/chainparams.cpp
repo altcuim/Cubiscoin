@@ -59,7 +59,6 @@ static Checkpoints::MapCheckpoints mapCheckpoints =
     (224983, uint256("0x54e0226e4cb3d660c6c79858aff2be1e34c2f5c72eafca3832ad3ad193e7f666"))
     (225004, uint256("0xc2015913ced99c4f8585bf369a2b851290ef36c042f3f5e473a699e91a9cc326"));
 
-
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1522639145, // * UNIX timestamp of last checkpoint block
