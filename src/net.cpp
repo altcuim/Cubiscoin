@@ -60,7 +60,7 @@ using namespace std;
 
 namespace
 {
-const int MAX_OUTBOUND_CONNECTIONS = 16;
+const int MAX_OUTBOUND_CONNECTIONS = 60;
 
 struct ListenSocket {
     SOCKET socket;
@@ -322,7 +322,7 @@ bool IsLocal(const CService& addr)
 bool IsReachable(enum Network net)
 {
     LOCK(cs_mapLocalHost);
-    return vfReachable[net] && !vfLimited[net];
+    return !vfLimited[net];
 }
 
 /** check whether a given address is in a network we can probably connect to */
